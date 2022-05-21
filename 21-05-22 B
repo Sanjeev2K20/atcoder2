@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+int main(){
+    long long int n,k;
+    cin>>n>>k;
+    long long int arr[n],brr[k];
+    for(long long int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    for(long long int i=0;i<k;i++){
+        cin>>brr[i];
+    }
+    long long int A=0;
+    for(long long int i=0;i<n;i++){
+        if(arr[i]>A){
+            A=arr[i];
+        }
+    }
+    bool l1=0;
+    for(long long int i=0;i<k;i++){
+        long long int L=(brr[i]-1);
+        for(long long int j=0;j<n;j++){
+            if(j==L){
+                if(arr[j]==A){
+                    cout<<"Yes";
+                    l1=1;
+                    break;
+                }
+            }
+        }
+        if(l1==1){
+            break;
+        }
+    }
+    if(l1==0){
+        cout<<"No";
+    }
+}
