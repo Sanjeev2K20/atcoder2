@@ -1,0 +1,12 @@
+question: https://atcoder.jp/contests/abc264/tasks/abc264_a
+code: https://onlinegdb.com/WW2w135Su
+#include<iostream>
+using namespace std;
+int main(){
+    int a,b;
+    cin>>a>>b;
+    string s= "atcoder";
+    for(int i=a- 1;i<=b- 1;i++){
+        cout<<s[i];
+    }
+}
